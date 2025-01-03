@@ -1,0 +1,178 @@
+<html lang="en">
+<link href='stylesheet.css' rel='stylesheet'> <!-- Verknüpfung der Index Datei mit dem Stylesheet  -->
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Arnoldispiel</title>
+</head>
+<body>
+    <div class = "Responsive">
+        <div class = "Titel" id = "Titel">
+                Arnoldispiel
+        </div>
+        <div class ="Transition", id = "overlappingDIV"></div>
+        <canvas></canvas>
+        <div class = "Auswahl" id = "AuswahlID"> 
+
+            <div class = "Geräte" id="Geräte">
+                <button class = "GeräteButton">Handy</button>
+                <button class = "GeräteButton">PC</button>
+            </div>
+
+
+        </div>
+        
+        <div id="movingInterface">
+            <div class = "movingInterface">
+
+                <div class = "movingUp" id = 'Up'>
+                    <button class = "movingUpButton">
+                        <span class = "Pfeil">&#8679;</span>
+                    </button>
+                </div>
+                
+                <div class = "movingRightLeft">
+                    
+                    <button id = 'Left' class = "movingRightLeftButton">
+                        <span class = "Pfeil">&#8678;</span>
+                        
+                    </button>
+                    <button  disabled id ="formatButton" class = "movingRightLeftButton">
+                        
+                    </button>
+                    <button id = 'Right' class = "movingRightLeftButton">
+                        <span class = "Pfeil">&#8680;</span>
+                        
+                    </button>
+                </div>
+
+                <div class = "movingDown" id = 'Down'>
+                    <button class="movingDownButton">
+                        <span class = "Pfeil">&#8681;</span>
+                        
+                        
+                    </button>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class = 'timer' id="IDtimer" >
+            <div class="Zeit" id = "TimerText">
+                00:00
+            </div>
+        </div>
+
+        
+           
+            <div class = "Interface" id = "Interface">
+                <div id="DialogBox" class = "Dialog">
+                    <div id="DialogText" class = "DialogText">asdadfasdf </div>
+                    <div class ="DialogButton">
+                    <button id="Fortfahren">Fortfahren</button>
+                    </div>
+
+                </div>
+                    <div id = 'Content' class="Content">
+                        <div class = "Answers" id = "Answers">
+                            <button class="AnswersButton" id="Antwort1">x:2 | y:4 | z:3</button>
+                            <button class = "AnswersButton" id="Antwort2">x:1 | y:3 | z:4</button>
+                            <button class = "AnswersButton" id = "Antwort3">x:1 | y:4 | z:3</button>
+                            <button class = "AnswersButton" id = "Antwort4">x:2 | y:4 | z:1</button>
+                        </div>
+                        <div class = "Hinweise">
+                            
+                            <button disabled = "true" id = "Hinweis1" class="HinweisCss">Hinweis1</button>
+                            <button disabled = "true"  id = "Hinweis2" class="HinweisCss">Hinweis2</button>
+                            <button disabled = "true" id = "Hinweis3"class="HinweisCss">Hinweis3</button>
+                            <button id = "Zurück" class="ZurückCss">Zurück</button>
+
+                        </div>
+                        
+                    </div>
+                
+            </div>
+        
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" 
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    
+    </script>
+
+    <!-- Importieren der Arrays für die Zonen -->
+
+    <script src="data/Ebene0/SchulhofZonen.js"> </script> 
+
+    <script src="data/Ebene0/EingangSchulhof.js"> </script> 
+
+    <script src="data/Ebene1/Flur1Zonen.js"> </script> 
+
+    <script src="data/Ebene1/Flur1ZonenVerschiebung.js"> </script>
+
+    <script src="data/Ebene1/Treppe1.js"> </script>
+
+    <script src="data/Ebene1/EingangRaum1.js"> </script> 
+
+    <script src="data/Ebene1/Klassenraum1Zonen.js"> </script> 
+
+    <script src="data/Ebene1/Rätsel1.js"> </script>
+
+    <script src="data/Ebene1/Tür1.js"> </script> 
+
+    <script src="data/Ebene5/AulaZonen.js"> </script>
+
+
+
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <!-- Importieren der Bilder und Klassen -->
+
+    <script src="JavaScript/pleaserotate.js"> </script>
+
+    <script src="JavaScript/Allgemein/classes.js"> </script> 
+
+    <script src="JavaScript/Allgemein/Zonen.js"> </script> 
+    
+
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <!-- Importieren der allgemeinen Funktionen -->
+
+   
+
+    <script src="JavaScript/Allgemein/Timer.js"> </script> 
+
+    <script src="JavaScript/Allgemein/InteraktionenRätsel.js"> </script> 
+
+
+    <!------------------------------------------------------------------------------------------------------------->
+   
+    <!-- Importieren der einzelnen Ebenen -->
+
+    <script src="JavaScript/Ebenen/Ebene0/Startbildschirm.js"> </script> 
+
+    <script src="JavaScript/Ebenen/Ebene0/Schulhof.js"> </script> 
+
+    <script src="JavaScript/Ebenen/Ebene1/Flur1.js"> </script> 
+
+    <script src="JavaScript/Ebenen/Ebene1/Flur1Verschiebung.js"> </script> 
+
+    <script src="JavaScript/Ebenen/Ebene1/Raum1.js"> </script>
+   
+    <script src="JavaScript/Ebenen/Ebene1/Rätsel1.js"> </script> 
+
+    <script src="JavaScript/Ebenen/Ebene5/Aula.js"> </script>
+
+    <script src="JavaScript/Allgemein/Spieler.js"> </script> 
+
+</body>
+
+</html>
+
