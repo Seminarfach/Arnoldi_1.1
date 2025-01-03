@@ -95,6 +95,39 @@ if(landscape){
 }
 
 
+let orn = getOrientation()
+
+function getOrientation (){
+    let _orn = screen.msOrientation || (screen.orientation || screen.mozOrientation).type
+    
+    switch (_orn) {
+        case 'portrait-primary':
+            break;
+        case 'portrai-secondary':
+            break;
+        case 'landscape-primary':
+            console.log('Laptop')
+            animateStartbildschirm()
+            break;
+        case 'landscape-sceondary':
+            break
+    }
+}
+
+window.matchMedia("(orientation:landscape)").addEventListener("change", e => {
+    const landscape = e.matches
+
+    if(landscape) {
+
+        animateStartbildschirm()
+        
+
+    }
+
+ 
+
+})
+
 
 
 
